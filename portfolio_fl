@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil — Portfolio Graphiste</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ---- STYLE GLOBAL ---- */
+body {
+  margin:0;
+  font-family:Inter, sans-serif;
+  background: linear-gradient(135deg, #0f1724 0%, #1b2638 100%);
+  color:#e6eef6;
+  overflow-x:hidden;
+}
+
+/* Container */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:30px;
+}
+
+/* ---- HEADER ---- */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+header strong {
+  font-size:22px;
+  color:#ef6f3c;
+}
+nav a {
+  color:#9aa4b2;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:600;
+  transition:.3s;
+}
+nav a:hover,
+nav a.active { color:#ef6f3c; }
+
+/* ---- HERO SECTION ---- */
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:40px;
+}
+.hero-text h1 {
+  font-family:Playfair Display;
+  font-size:52px;
+  margin:0 0 16px;
+}
+.hero-text p {
+  font-size:18px;
+  color:#adb9c9;
+}
+.hero-img {
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:#283349;
+  background-size:cover;
+  background-position:center;
+  border:4px solid #ef6f3c;
+  box-shadow:0 0 30px rgba(239,111,60,.4);
+}
+
+/* ---- BOUTONS ---- */
+.btn {
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:10px;
+  margin-top:20px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+  text-decoration:none;
+}
+.btn-primary { background:#ef6f3c; color:#091522; }
+.btn-primary:hover { filter:brightness(1.15); }
+.btn-outline {
+  border:1px solid #9aa4b2;
+  color:#9aa4b2;
+}
+.btn-outline:hover {
+  color:#fff;
+  border-color:#ef6f3c;
+}
+
+/* ---- SECTIONS ---- */
+.section {
+  margin-top:70px;
+}
+.section h2 {
+  font-size:32px;
+  font-family:Playfair Display;
+  margin-bottom:10px;
+}
+.section p { color:#adb9c9; }
+
+/* ---- SHAPES DÉCORATIVES ---- */
+.circle,
+.triangle {
+  position:absolute;
+  opacity:.15;
+  z-index:-1;
+}
+.circle {
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:#ef6f3c;
+  top:200px; left:-50px;
+  filter:blur(30px);
+}
+.triangle {
+  width:0;
+  height:0;
+  border-left:160px solid transparent;
+  border-right:160px solid transparent;
+  border-bottom:200px solid #4a5268;
+  right:-80px;
+  top:120px;
+  transform:rotate(20deg);
+  filter:blur(10px);
+}
+
+/* ---- ANIMATION DOUCE ---- */
+.hero-img {
+  animation:fadeUp 1.2s ease;
+}
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(40px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:900px){
+  .hero {flex-direction:column;}
+  .hero-img {margin-top:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="triangle"></div>
+
+<header class="container">
+  <div><strong>Fatou LO</strong></div>
+  <nav>
+    <a href="accueil.html" class="active">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bonjour, je suis Fatou LO</h1>
+      <p>Étudiante en Licence 3 en infographie & design numérique à l'Université Amadou Mahtar Mbow de Diamniadio, je transforme les idées en créations visuelles impactantes.</p>
+      <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+    </div>
+
+
+  </section>
+
+  <!-- SECTIONS CONTENU -->
+  <div class="section">
+    <h2>À propos de moi</h2>
+    <p>Je conçois affiches, logos, flyers, publications social media, carroussels packaging.</p>
+  </div>
+
+  <div class="section">
+    <h2>Mon CV</h2>
+    <a href="c:\Users\admin\Downloads\cv.pdf" class="btn btn-outline" target="_blank">Télécharger mon CV</a>
+  </div>
+
+  <div class="section">
+    <h2>mes cordonnés</h2>
+    <p>Frappez fort avec un design qui marque les esprits. Contactez-moi !</p>
+    <a href="contact.html" class="btn btn-primary">Contacts</a>
+  </div>
+</main>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Portfolio Graphiste</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {margin:0; font-family:Inter; background:#0f1724; color:#e6eef6;}
+.container {max-width:1100px; margin:auto; padding:30px;}
+header {display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;}
+nav a {color:#9aa4b2; text-decoration:none; margin-left:16px; font-weight:600;}
+nav a.active {color:#ef6f3c;}
+h1 {font-family:Playfair Display; font-size:32px; margin:0 0 20px;}
+p {color:#9aa4b2; line-height:1.6;}
+.contact-card {background:#0b1220; border-radius:12px; padding:16px; margin-bottom:16px;}
+.contact-card strong {display:block; margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header class="container">
+  <div><strong>Fatou LO</strong></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Contact</h1>
+  <div class="contact-card">
+    <strong>Email</strong>
+    <p>lo.fatou@uam.edu.sn</p>
+  </div>
+  <div class="contact-card">
+    <strong>Numéro de téléphone</strong>
+    <p>+221 76 328 13 36</p>
+  </div>
+  <div class="contact-card">
+    <strong>Réseaux sociaux</strong>
+    <p>Behance • Facebook • LinkedIn • Instagram • TikTok </p>
+  </div>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projets — Portfolio Graphiste</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {margin:0;font-family:Inter;background:#0f1724;color:#e6eef6;}
+.container {max-width:1100px;margin:auto;padding:60px;}
+header {display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;}
+nav a {color:#9aa4b2;text-decoration:none;margin-left:16px;font-weight:800;}
+nav a.active {color:#ef6f3c;}
+h1,h2 {font-family:Playfair Display;margin-bottom:20px;}
+h1 {font-size:32px;  text-align: center; /* Centrer le texte */
+  width: fit-content; /* S'adapte à la largeur du texte */ margin: 0 auto; /* Centre l'élément dans la page */} 
+h2 {font-size:25px;margin-top:20px; border-radius: 10px; /* Coins arrondis */background-color: #eb7f1a; /* Couleur du fond */
+  color: #000000; /* Couleur du texte */margin: 3 auto; /* Centre l'élément dans la page */
+  border-radius: 15px; /* Coins arrondis */text-align: center;}
+p.cat {color:#9aa4b2;margin-bottom:24px;}
+.grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.card {background:#0b1220;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;align-items:center;transition: transform 0.3s, box-shadow 0.3s;}
+.card:hover {transform: translateY(-6px);box-shadow: 0 10px 20px rgba(253, 149, 64, 0.5);}
+.card img {width:100%;border-radius:8px;margin-bottom:10px;}
+.card strong {margin-bottom:6px;text-align:center;}
+.card .cat {color:#9aa4b2;font-size:13px;text-align:center;}
+ div strong{ font-size: 3rem; /* plus moderne que px */
+  font-weight: bold;}
+</style>
+</head>
+<body>
+
+<header class="container">
+  <div><strong>Fatou LO</strong></div>
+  <nav>
+    <a href="accueil.html">Accueil</a>
+    <a href="projets.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+<h1>Mes Projets</h1>
+
+<!-- Social Media -->
+<h2>Social Media</h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\viande fondue.jpg" alt="Post 1"><strong></strong><div class="cat">Social Media</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\piment.jpg" alt="Post 2"><strong></strong><div class="cat">Social Media</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\intelligence artificielle dans le domaine educatif.jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\offred.jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\nuur café promo.jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\gamou yoff.jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\entreprenariat..jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\fadesign,.jpg" alt="Post 3"><strong></strong><div class="cat">Social Media</div></div>
+</div>
+
+
+
+<!-- Flyers -->
+<h2>Flyers</h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\show.jpg" alt="Flyer 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\fees.jpg" alt="Flyer 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\conte.jpg" alt="Flyer 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\concert.jpg" alt="Flyer 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\promo.jpg" alt="Flyer 3"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\affiche3.jpg" alt="Flyer 2"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\WhatsApp Image 2024-10-19 at 00.50.20.jpeg" alt="Flyer 2"><strong></strong><div class="cat"></div></div>
+    <div class="card"><img src="c:\Users\admin\Documents\affiches\affiches\FORMATION  DIGITAL copie.jpg" alt="Flyer 2"><strong></strong><div class="cat"></div></div>
+</div>
+<h2>Carrousel </h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\c1-100.jpg" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\c2-100.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\c3-100.jpg" alt="Campagne 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\1x\c4-100.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\c5-100.jpg" alt=""><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\c6-100.jpg" alt=""><strong></strong><div class="cat"></div></div>
+</div>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\Plan de travail 1-100.jpg" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\Plan de travail 2-100.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\1x\Plan de travail 3-100.jpg" alt="Campagne 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\1x\Plan de travail 4-100.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Carrousel\1x\Plan de travail 4-100.jpg" alt=""><strong></strong><div class="cat"></div></div>
+</div>
+<!-- Logos -->
+<h2>Logos</h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\sama dekku waay.jpg" alt="Logo 1"><strong></strong><div class="cat">Logo</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\baobab menuserie.jpg" alt="Logo 2"><strong></strong><div class="cat">Logo</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\conception famillet logo presenta.jpg" alt="Logo 3"><strong></strong><div class="cat">Logo</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\logo fadesign.jpg" alt="Logo 3"><strong></strong><div class="cat">Logo</div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\nuur café promo logo.jpg" alt="Logo 3"><strong></strong><div class="cat">Logo</div></div>
+    <div class="card"><img src="c:\Users\admin\Downloads\ahloulahi alminium.jpg" alt="Logo 3"><strong></strong><div class="cat">Logo</div></div>
+</div>
+<h2>packagins</h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Desktop\vlog 2025\Capture d’écran 2025-11-25 181735.jpg" alt="Mockup 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Desktop\vlog 2025\Capture d’écran 2025-11-25 181348.jpg" alt="Mockup 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-27 205921.jpg" alt="Mockup 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\téléchargé (64).SVG).jpg" alt="Mockup 3"><strong></strong><div class="cat"></div></div>
+    <div class="card"><img src="c:\Users\admin\Downloads\Sans titre - 1.jpg" alt="Packaging 3"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\dasm cocoo.jpg" alt="Packaging 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\dasm cocoo dasm.jpg" alt="Packaging 2"><strong></strong><div class="cat"></div></div>
+</div>
+
+
+<h2>Campagnes</h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\ChatGPT Image 28 nov. 2025, 13_27_01.png" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 154626.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Pocket WiFi vs eSIM_ Which is better for Business Travel_ - Holiday Tours & Travel.jpg" alt="Campagne 3"><strong></strong><div class="cat">Campagne</div></div>
+</div>
+<h2>siteweb sur figma </h2>
+<div class="grid">
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 163725.jpg" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 163512.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 163128.jpg" alt="Campagne 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 165228.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 163349.jpg" alt=""><strong></strong><div class="cat"></div></div>
+</div>
+<h2>Applications sur figma </h2>
+<div class="grid">
+      <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155151.jpg" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155238.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155356.jpg" alt="Campagne 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155455.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155604.jpg" alt=""><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-29 155658.jpg" alt=""><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 185103.jpg" alt="Campagne 1"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 185240.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 185457.jpg" alt="Campagne 3"><strong></strong><div class="cat"></div></div>
+   <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 184454.jpg" alt="Campagne 2"><strong></strong><div class="cat"></div></div>
+  <div class="card"><img src="c:\Users\admin\Downloads\Capture d’écran 2025-11-28 184751.jpg" alt=""><strong></strong><div class="cat"></div></div>
+</div>
+
+</main>
+</body>
+</html>
+
